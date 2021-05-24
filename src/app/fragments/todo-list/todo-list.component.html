@@ -1,0 +1,25 @@
+<div class="todo-list" *ngIf="filterMode">
+  <div class="todo" *ngFor="let todo of filtredValues">
+    <div class="todo-text">{{todo.text}}</div>
+    <label for="checkboxValue"></label>
+    <input class="todo-checkbox"
+           id="checkboxValue"
+           type="checkbox"
+           [checked]="todo.done">
+    <button class="app-button" (click)="deleteTodoPoint(todo.text)">delete</button>
+  </div>
+</div>
+
+<div class="todo-list" *ngIf="!filterMode">
+  <div class="todo" *ngFor="let todo of todos">
+    <div class="todo-text">{{todo.text}}</div>
+    <label for="checkboxValueFilterMod"></label>
+    <input class="todo-checkbox"
+           #checkboxValue
+           id="checkboxValueFilterMod"
+           type="checkbox"
+           [checked]="todo.done"
+           (click)="updateCheckBoxValue(todo,checkboxValue.checked)">
+    <button class="app-button" (click)="deleteTodoPoint(todo.text)">delete</button>
+  </div>
+</div>

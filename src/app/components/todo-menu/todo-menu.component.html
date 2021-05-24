@@ -1,0 +1,13 @@
+<div class = "wrapper" (click)="exitOfFilterMod()">
+  <app-todo-text></app-todo-text>
+  <app-search (searchingItem)="filter($event)"></app-search>
+  <app-remaining [reminingTasks]="unchecked.length"></app-remaining>
+  <app-todo-list [filtredValues]="filtredValues"
+                 [filterMode]="filterMode"
+                 [todos]="todos"
+                 (deleteEvent)="deleteTodoItem($event)"
+                 (updateCheckBoxValues)="updateRemainingItems($event)">
+  </app-todo-list>
+  <app-create-task (addTodoEvent)="addTodoItem($event)"></app-create-task>
+  <app-clean-elements (cleanCheckedElements) = "cleanAllCheckedElements()"></app-clean-elements>
+</div>

@@ -1,0 +1,23 @@
+.todo-list{
+
+}
+
+.todo{
+ width: 100%;
+ display: block;
+}
+
+.todo-text{
+  display: inline-block;
+  width: 245px;
+  height:20px;
+}
+
+.app-button{
+  background-color: orangered;
+  border: none;
+  margin-left: 20px;
+  width: 50px;
+  height:20px;
+}
+

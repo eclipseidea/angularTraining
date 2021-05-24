@@ -1,0 +1,8 @@
+<div>
+  <label for="text-search"></label>
+  <input type="text"
+         #myInput
+         id="text-search"
+         placeholder="filter tasks"
+         (input)="enableFilterMod(myInput.value)">
+</div>
